@@ -8,7 +8,6 @@
         <style type="text/css">
             body {
                 margin: 40px auto;
-                max-width: 650px;
                 color: #444;
                 padding: 0 10px;
                 font-family: "Courier New", "Courier", monospace;
@@ -21,15 +20,15 @@
             }
 
             .content {
-                max-width: 800px;
+                max-width: 650px;
                 margin: 0 auto;
-                text-align: center;
             }
 
             .image-grid {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
+                max-width: 100vw;
                 margin-top: 20px;
             }
 
@@ -58,6 +57,7 @@
         </style>
     </head>
     <body>
+        <div class="content">
         <header>
             <h1>
                 <a href="index.html" style="text-decoration: none; color: inherit;">
@@ -86,14 +86,12 @@
                 You can acquire your preferred design by placing an offer of $75 or more (in TEZ equivalent), which I'll accept. If there are multiple offers, I'll pick the highest. This price includes the NFT & cap but excludes shipping. Cap redemption will be handled via <a href="https://artfora.com" target="_blank">Artfora</a> (which we are currently still setting up).
                 If you are not buying the cap directly from my wallet (tz1M7dt8sWC64ZXkmiWbttVCtgFrFU6Do9x9), please view the collection on Artfora to check whether the cap has already been redeemed or not.
             </p>
-                
+        </div>
+
             <div class="image-grid" id="imageGrid"></div>
 
             <script>
-                // Base URL
                 const baseURL = "https://www.fxhash.xyz/gentk/KT1EfsNuqwLAWDd3o4pvfUx1CAh5GMdTrRvr-";
-
-                // Unique token numbers (including skips)
                 const tokenNumbers = [
                     218975, 218976, 218977, 218978, 218979, 218980, 218981, 218982, 218983, 218984,
                     218985, 218986, 218990, 218992, 218993, 218994, 218995, 218996, 218997, 218998,
@@ -101,20 +99,14 @@
                     219009, 219010, 219011, 219012, 219013, 219014, 219015, 219016, 219017, 219018,
                     219019, 219020, 219021, 219022, 219023, 219024, 219025, 219026
                 ];
-
-                // Get the grid container
                 const gridContainer = document.getElementById("imageGrid");
-
-                // Loop through and create images with links
                 tokenNumbers.forEach((tokenNumber, index) => {
                     const link = document.createElement("a");
                     link.href = baseURL + tokenNumber;
-                    link.target = "_blank"; // Opens in a new tab
-                    
+                    link.target = "_blank";                  
                     const img = document.createElement("img");
                     img.src = `images/wtbs/cap-WTBS-${String(index + 1).padStart(2, '0')}.png`;
-                    img.loading = "lazy";
-                    
+                    img.loading = "lazy";        
                     link.appendChild(img);
                     gridContainer.appendChild(link);
                 });
