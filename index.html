@@ -19,12 +19,48 @@
                 line-height: 1.2;
                 font-family: 'Arial', sans-serif;
             }
+
+            .full-width-section {
+                width: 95vw;
+                margin: 40px 0;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .image-grid {
+                display: grid;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            @media (min-aspect-ratio: 1/1.1) {
+                .image-grid {
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: repeat(4, auto);
+                }
+            }
+
+            @media (max-aspect-ratio: 1/1.1) {
+                .image-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(10, auto);
+                }
+            }
+
+            .image-grid img {
+                width: 100%;
+                height: auto;
+                display: block;
+                animation: fadeIn 0.8s ease-in-out forwards;
+            } 
+
             .footer {
-                position: fixed;
-                padding: 0 10px;
+                padding: 25px 10px;
                 bottom: 0;
                 width: 100%;
             }
+
         </style>
     </head>
     <body>
@@ -33,9 +69,33 @@
             </h1>
                 
             <p> 
-                I'm an artist and engineer from The Netherlands, currently living in Berlin. 
+                I'm an artist, designer, maker, and engineer from The Netherlands, currently living in Berlin. 
             </p>
-
+            
+            <div class="full-width-section">
+                <div class="image-grid">
+                    <img src="images/portfolio/visual overview -01.jpg" alt="">
+                    <img src="images/portfolio/visual overview -02.jpg" alt="">
+                    <img src="images/portfolio/visual overview -03.jpg" alt="">
+                    <img src="images/portfolio/visual overview -04.jpg" alt="">
+                    <img src="images/portfolio/visual overview -05.jpg" alt="">
+                    <img src="images/portfolio/visual overview -06.jpg" alt="">
+                    <img src="images/portfolio/visual overview -07.jpg" alt="">
+                    <img src="images/portfolio/visual overview -08.jpg" alt="">
+                    <img src="images/portfolio/visual overview -09.jpg" alt="">
+                    <img src="images/portfolio/visual overview -10.jpg" alt="">
+                    <img src="images/portfolio/visual overview -11.jpg" alt="">
+                    <img src="images/portfolio/visual overview -12.jpg" alt="">
+                    <img src="images/portfolio/visual overview -13.jpg" alt="">
+                    <img src="images/portfolio/visual overview -14.jpg" alt="">
+                    <img src="images/portfolio/visual overview -15.jpg" alt="">
+                    <img src="images/portfolio/visual overview -16.jpg" alt="">
+                    <img src="images/portfolio/visual overview -17.jpg" alt="">
+                    <img src="images/portfolio/visual overview -18.jpg" alt="">
+                    <img src="images/portfolio/visual overview -19.jpg" alt="">
+                    <img src="images/portfolio/visual overview -20.jpg" alt="">
+                </div>
+            </div>
             <p>
                 You can find my artist bio and CV <a href="bio-cv.html">here</a>.
             </p>
@@ -45,12 +105,8 @@
             <p>
                 <ul>
                     <li>
-                        <a href="oefenstof.html">Oefenstof</a> - a series of generative embroidery samplers
+                        Figuring out how to send my art to a knitting machine while I'm taking a break from social media.
                     </li>                  
-                    <li>
-                        <a href="yesyesno.html">{yes, yes, no, yes}</a>
-                        - a generative tattoo project together with <a href="https://www.instagram.com/kyra.orbons/" target="_blank">Kyra Orbons</a>
-                    </li>
                 </ul>              
             </p>
 
@@ -58,6 +114,13 @@
 
             <p>
                 <ul>
+                    <li>
+                        <a href="oefenstof.html">Oefenstof</a> - a series of generative embroidery samplers
+                    </li>                  
+                    <li>
+                        <a href="yesyesno.html">{yes, yes, no, yes}</a>
+                        - a generative tattoo project together with <a href="https://www.instagram.com/kyra.orbons/" target="_blank">Kyra Orbons</a>
+                    </li>                    
                     <li>
                         <a href="wtbs-cap.html">WTBS: Wearable #1 (cap edition)</a>
                         - a collection of one of a kind embroidered caps for my favorite WEB3 podcast <a href="https://open.spotify.com/show/1mCgOIE98vpVpE9nRzWfrM" target="_blank">Waiting To Be Signed</a>
