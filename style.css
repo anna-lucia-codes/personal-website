@@ -28,6 +28,8 @@ p {
 
 .caption {
     font-size: 12px;
+    font-weight: 300;
+    text-align: left;
 }
 
 .full-width-section {
@@ -100,7 +102,7 @@ p {
 
 .view-controls {
     position: fixed;
-    right: 80px;
+    right: 100px;
     bottom: 16px;
     display: flex;
     flex-direction: row;
@@ -125,7 +127,7 @@ body::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 190px);
+    min-height: calc(100vh - 100px);
 }
 
 .featured a#featured-link {
