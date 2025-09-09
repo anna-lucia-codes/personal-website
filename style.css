@@ -98,6 +98,16 @@ p {
     z-index: 2;
 }
 
+.view-controls {
+    position: fixed;
+    right: 80px;
+    bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    z-index: 2;
+}
+
 body::after {
     content: "";
     position: fixed;
@@ -139,16 +149,6 @@ body::after {
     font-family: "Courier New", "Courier", monospace;
     font-size: 15px;
     margin-top: 15px;
-}
-
-.view-controls {
-    position: fixed;
-    right: 100px;
-    bottom: 16px;
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    z-index: 2;
 }
 
 .structured {
@@ -193,4 +193,19 @@ body::after {
     color: black;
     margin-top: 5px;
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    .view-controls {
+        left: 50%;
+        right: auto;
+        bottom: 16px;
+        transform: translateX(-50%);
+        gap: 12px;
+        flex-wrap: nowrap;
+    }
+
+    body::after {
+        height: 80px;
+    }
 }
