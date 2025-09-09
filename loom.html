@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Anna Lucia - Loom</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>        
+            <h2> 
+                Loom (2021)
+            </h2>
+
+            <p style="font-weight: 300; font-size: 12px;"> 
+                200 NFTs
+                <a target="_blank" href="https://www.artblocks.io/collection/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-213?tab=Artworks" target="_blank"><br> 
+                Artblocks project page</a> <br>
+            </p>
+
+            <p style="font-weight: 300; font-size: 12px;">
+                Publication(s) <br>
+                - <a target="_blank" href="https://www.iillucid.com/slowing-down-with-anna-lucia-codes/">Slowing down with... Anna Lucia</a>, i illucid, March 2022   
+            </p>
+
+            <p style="font-weight: 300; font-size: 12px;">
+                Exhibition(s) <br>
+                - 2023 <a target="_blank" href="https://www.google.com/url?q=https://assembly.art/exhibitions/collecting-the-future&sa=D&source=editors&ust=1724685892872767&usg=AOvVaw2td5iWA7HHhJOExSVyfN1J">Collecting the Future</a>, Assembly, Houston, USA <br>
+                - 2022 <a target="_blank" href="https://www.google.com/url?q=https://decentralartpavilion.io/nft-exhibition/%23:~:text%3D23%2520APRIL%2520%25E2%2580%2593%252020%2520JUNE%25202022,the%2520renowned%2520Venice%2520Art%2520Biennale.&sa=D&source=editors&ust=1724685892875317&usg=AOvVaw0i_E-N745XgZius9p2Mqkp">Decentral Art Pavilion</a>, during Venice Biennale, Venice, Italy
+            </p>
+
+            <p>
+              Loom is a long-form generative artwork, released on Art Blocks in 2021. Each digital artwork is created at the moment of transaction on the Ethereum blockchain. The unique transaction data directly informs the randomness in the work, no two outputs are ever the same and the code to produce the works is stored on the blockchain. 
+            </p> 
+            
+            <p>
+              The algorithm is based on the mechanics of a four-shaft weaving loom. Horizontal and vertical threads interlace according to a virtual punch-card generated at the moment of transaction, often randomness distorts the orderly woven pattern. This work is created with p5.js.
+            </p>                                                 
+     
+            <div class="image-grid">
+                <img src="images/loom/1.png">
+                <img src="images/loom/2.png">
+                <img src="images/loom/3.png">
+                <img src="images/loom/4.png">
+
+                <img src="images/loom/5.png">
+                <img src="images/loom/6.png">
+                <img src="images/loom/7.png">
+                <img src="images/loom/8.png">
+
+                <img src="images/loom/11.png">
+                <img src="images/loom/12.png">
+                <img src="images/loom/13.png">   
+                <img src="images/loom/14.png">
+
+                <img src="images/loom/15.png">
+                <img src="images/loom/16.png">   
+                <img src="images/loom/17.png">                   
+                <img src="images/loom/18.png">    
+
+                <img src="images/loom/19.png">                   
+                <img src="images/loom/20.png">    
+                <img src="images/loom/9.png">                   
+                <img src="images/loom/10.png">            
+            </div>      
+
+            <div class="single-image">
+              <img src="images/loom/assembly_2.jpg">
+            </div>   
+
+            <div class="single-image">
+              <img src="images/loom/assembly_1.jpg">
+            </div>                       
+
+            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
+            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var imgs = document.querySelectorAll('.image-grid img, .single-image img');
+                    for (var i = 0; i < imgs.length; i++) {
+                        imgs[i].style.cursor = 'pointer';
+                        imgs[i].addEventListener('click', function () {
+                            var src = this.getAttribute('src');
+                            if (src) {
+                                window.open(src, '_blank', 'noopener');
+                            }
+                        });
+                    }
+                });
+            </script>
+        
+    </body>
+</html>

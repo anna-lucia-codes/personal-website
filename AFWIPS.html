@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Anna Lucia - Art For Walls In Public Spaces</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>        
+            <h2> 
+                Art For Walls In Public Spaces (2022)
+            </h2>
+
+            <p style="font-weight: 300; font-size: 12px;"> 
+                144 NFTs
+                <a target="_blank" href="https://www.fxhash.xyz/project/art-for-walls-in-public-spaces" target="_blank"><br> 
+                fx(hash) project page</a> <br>
+            </p>
+
+            <p style="font-weight: 300; font-size: 12px;">
+                Publication(s) <br>
+                - <a target="_blank" href="https://www.iillucid.com/slowing-down-with-anna-lucia-codes/">Slowing down with... Anna Lucia</a>, i illucid, March 2022   
+            </p>
+
+            <p style="font-weight: 300; font-size: 12px;">
+                Exhibition(s) <br>
+                - 2022 <a target="_blank" href="https://www.google.com/url?q=https://www.ooekultur.at/exhibition-detail/meta-space?expired&sa=D&source=editors&ust=1724685892875684&usg=AOvVaw16eQwasOvBcbr2ywep9P04">Raumvisionen</a>, Francisco Carolinum, Linz, Austria <br>
+                - 2022 <a target="_blank" href="https://www.google.com/url?q=https://spotlight.tezos.com/tezos-x-art-basel-basel-2022/&sa=D&source=editors&ust=1724685892876055&usg=AOvVaw23kv0sF_R85zULlcWnvCIN">Chance Encounters in New Mediums</a>, Tezos x Art Basel, Basel, Switzerland
+            </p>
+
+            <p>
+                For Art For Walls In Public Space, I was thinking about Brian Eno's <i>Music for Airports</i> and his ideas about ambient music, of which he said "it must be as ignorable as it is interesting". I wanted to explore how this principle might translate visually, particularly within the context of public space. 
+            </p>                                                   
+            <p>
+                Brian Eno composed <i>Music for Airports</i>, by layering tape loops of differing lengths, a similar method is applied in Art For Walls In Public Spaces. The work is built up of looping lines of varying phases and amplitudes, creating a composition continuously unfolding. The result is a visual environment that invites both passing glances and sustained attention. 
+            </p>   
+
+            <p>
+                The project was originally released in 2022 as a long-form generative NFT series on the platform fx(hash). Since then it has been displayed during a music festival in Brussels, and a modified still has been painted on a public wall in Granollers, Spain. 
+            </p>         
+
+            <div class="single-image">
+                <img src="images/afwips/output1.gif">
+            </div>   
+
+            <div class="single-image">
+                <img src="images/afwips/nabo.jpg">
+            </div>    
+
+            <div class="single-image">
+              <img src="images/structured/structure-12.png">
+            </div>    
+
+            <div class="single-image">
+                <img src="images/afwips/1.png">
+            </div>               
+              
+            <div class="single-image">
+                <img src="images/afwips/2.png">
+            </div>                
+
+            <div class="single-image">
+                <img src="images/afwips/4.png">
+            </div>   
+
+            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
+            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var imgs = document.querySelectorAll('.image-grid img, .single-image img');
+                    for (var i = 0; i < imgs.length; i++) {
+                        imgs[i].style.cursor = 'pointer';
+                        imgs[i].addEventListener('click', function () {
+                            var src = this.getAttribute('src');
+                            if (src) {
+                                window.open(src, '_blank', 'noopener');
+                            }
+                        });
+                    }
+                });
+            </script>
+        
+    </body>
+</html>

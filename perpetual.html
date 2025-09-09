@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Anna Lucia - Perpetual Oscillations</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>        
+            <h2> 
+                Perpetual Oscillations (2022)
+            </h2>
+
+            <p style="font-weight: 300; font-size: 12px;"> 
+                100 NFTs
+                <a target="_blank" href="https://www.fxhash.xyz/project/perpetual-oscillations" target="_blank"><br> 
+                fx(hash) project page</a> <br>
+            </p>
+
+            <p style="font-weight: 300; font-size: 12px;">
+                Publication(s) <br>
+                - <a target="_blank" href="https://www.iillucid.com/slowing-down-with-anna-lucia-codes/">Slowing down with... Anna Lucia</a>, i illucid, March 2022   
+            </p>
+
+            <p style="font-weight: 300; font-size: 12px;">
+                Exhibition(s) <br>            
+                - 2024 <a target="_blank" href="https://responsivedreams.com/">Responsive Dreams Festival</a>, The Generative Art Museum, Barcelona, Spain <br>                
+                - 2024 <em>FX HASH Art Kiosk</em>, Digital Art Mile, Basel, Switzerland  <br> 
+                - 2022 <a target="_blank" href="https://www.google.com/url?q=https://www.azuremagazine.com/events/art-bash-2022/&sa=D&source=editors&ust=1724685892874639&usg=AOvVaw2FLZOkL-hCf_3oazL5l7Sf">AGO Art Bash! All Out!</a>, Art Gallery Ontario, Toronto, Canada                                
+            </p>
+
+            <p>
+                Perpetual Oscillations extends my exploration of ambient visuals first developed in<a href="afwips.html">Art For Walls In Public Spaces</a>. Using the same generative techniques: layered, looping lines in shifting phases, I sought to create a series of works that are constantly in motion, yet quietly meditative.
+            </p>                                             
+     
+            <p>
+                Released as a collection of 100 NFTs on fx(hash), each iteration offers a unique unfolding rhythm, inviting viewers to experience a visual equivalent of ambient music: endlessly variable, subtly immersive, and open to both fleeting attention and deep contemplation.
+            </p>      
+
+            <div class="single-image">
+                <img src="images/structured/structure-11.png">
+            </div> 
+
+            <div class="image-grid">
+                <img src="images/perpetual/012.jpeg">
+                <img src="images/perpetual/015.jpeg">
+                <img src="images/perpetual/018.jpeg">
+                <img src="images/perpetual/020.jpeg">
+
+                <img src="images/perpetual/025.jpeg">
+                <img src="images/perpetual/030.jpeg">
+                <img src="images/perpetual/031.jpeg">
+                <img src="images/perpetual/036.jpeg">
+
+                <img src="images/perpetual/037.jpeg">
+                <img src="images/perpetual/038.jpeg">
+                <img src="images/perpetual/040.jpeg">   
+                <img src="images/perpetual/053.jpeg">     
+            </div>                             
+
+            <div class="single-image">
+                <img src="images/perpetual/lente1.jpg">
+            </div> 
+
+            <div class="single-image">
+                <img src="images/perpetual/lente2.jpg">
+            </div> 
+
+            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
+            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var imgs = document.querySelectorAll('.image-grid img, .single-image img');
+                    for (var i = 0; i < imgs.length; i++) {
+                        imgs[i].style.cursor = 'pointer';
+                        imgs[i].addEventListener('click', function () {
+                            var src = this.getAttribute('src');
+                            if (src) {
+                                window.open(src, '_blank', 'noopener');
+                            }
+                        });
+                    }
+                });
+            </script>
+        
+    </body>
+</html>

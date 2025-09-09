@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Anna Lucia - Synths</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>        
+            <h2> 
+                Synths (2024)
+            </h2>
+
+            <p style="font-weight: 300; font-size: 12px;"> 
+                5 limited edition prints
+            </p>
+
+            <p style="font-weight: 300; font-size: 12px;">
+                Exhibition(s) <br>
+                - 2024 <em>Synths</em>, Luisa Catucci Gallery, Berlin, Germany
+            </p>
+
+            <p>
+                <b>Excerpt exhibition text:</b> Synths, as manifestations of the human impulse to replicate, reimagine, and reconstruct, is a group exhibition of three artists: <a href="https://www.sp2.berlin/artists/maqd8Ep/ken-wiatrek/">Ken Wiatrek</a>, Anna Lucia, and <a href="https://schwittlick.net/">Marcel Schwittlick</a>. Every piece on display serves as a testament to the myriad ways in which artists present the power of synths—be they mechanical contraptions, algorithmic systems, or abstract concepts—to breathe life into their visions.
+            </p> 
+
+            <p>
+                Synths represent not only mechanical reproductions or musical devices but also serve as metaphors for the union of human creativity and technological innovation. The concept of synths explores the connection between the organic and the artificial, the human and the machine. Just as a drawing machine becomes a synth of the artist's arm, other forms of mechanical reproduction or design serve as extensions of human expression. The resulting artworks possess a synthetic woven-ness, blending the tactile qualities of the human touch with the precision of mechanical processes. By embracing the concept of synths, artists are able to explore new realms of possibilities, pushing the boundaries of creativity and challenging traditional notions of authorship and authenticity.
+            </p>  
+            
+            <p>
+                Some prints are still available <a href="Available_Prints_Anna_Lucia.pdf" target="_blank"> here</a>.
+            </p>                                                 
+    
+            <div class="single-image">
+              <img src="images/synths/Synths-031.png">
+            </div>   
+
+            <div class="single-image">
+              <img src="images/synths/Synths-040.png">
+            </div>     
+            
+            <div class="single-image">
+                <img src="images/synths/Synths-037.png">
+            </div>  
+
+            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
+            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var imgs = document.querySelectorAll('.image-grid img, .single-image img');
+                    for (var i = 0; i < imgs.length; i++) {
+                        imgs[i].style.cursor = 'pointer';
+                        imgs[i].addEventListener('click', function () {
+                            var src = this.getAttribute('src');
+                            if (src) {
+                                window.open(src, '_blank', 'noopener');
+                            }
+                        });
+                    }
+                });
+            </script>
+        
+    </body>
+</html>

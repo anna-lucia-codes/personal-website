@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Anna Lucia - (e)mail art</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>        
+            <h2> 
+                e(mail) art (2025 - ongoing)
+            </h2>
+
+            <p style="font-weight: 300; font-size: 12px;"> 
+                Sometimes weekly emails
+            </p>
+
+            <p>
+                (e)mail art is a project I started in July 2025, emerging from a desire to circumvent the algorithms of digital culture. Almost every week, I send an email containing an artwork made up of HTML code and generated in Python to all subscribers. Every email is unique and is not reviewed by me before sending. 
+            </p> 
+            
+            <p>
+                The project draws inspiration from Mail Art, art sent through the post, outside of the art world system, meant to be touched, shared, not handled with white gloves, but bent along the way, but reimagined in digital form. Email is ubiquitous and mundane; by choosing this medium, I question the value and permanence of digital art. Unlike NFTs, which promise scarcity and immutability, email might get flagged as spam, forwarded (read: copied), deleted without a second thought, or saved in a folder never to be opened again. Can art retain meaning when it can be so easily generated, received, and discarded? How can art live in digital spaces? (e)mail art continues my exploration of undervalued and unstable materials, like textiles and code.
+            </p>   
+
+            <p>
+                If you want to join the mailing list: sign up for my <a href="https://annaluciawrites.substack.com/">Substack</a> and you will be included in the art mails or send me an email at hi [at] annalucia.io, and I'll add you to the list. 
+            </p>  
+
+            <div class="image-grid">
+                <img src="images/emailart/email-01.png">
+                <img src="images/emailart/email-02.png">
+                <img src="images/emailart/email-03.png">
+                <img src="images/emailart/email-04.png">
+
+                <img src="images/emailart/email-05.png">
+                <img src="images/emailart/email-06.png">
+                <img src="images/emailart/email-07.png">
+                <img src="images/emailart/email-08.png">
+
+                <img src="images/emailart/email-09.png">
+                <img src="images/emailart/email-10.png">
+                <img src="images/emailart/email-15.png">   
+                <img src="images/emailart/email-13.png">      
+            </div>      
+
+            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
+            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var imgs = document.querySelectorAll('.image-grid img, .single-image img');
+                    for (var i = 0; i < imgs.length; i++) {
+                        imgs[i].style.cursor = 'pointer';
+                        imgs[i].addEventListener('click', function () {
+                            var src = this.getAttribute('src');
+                            if (src) {
+                                window.open(src, '_blank', 'noopener');
+                            }
+                        });
+                    }
+                });
+            </script>
+        
+    </body>
+</html>

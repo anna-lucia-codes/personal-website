@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Anna Lucia - Thread</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>        
+            <h2> 
+                Thread (2025)
+            </h2>
+
+            <p style="font-weight: 300; font-size: 12px;"> 
+                250 NFTs
+                <a target="_blank" href="https://www.artblocks.io/collection/thread-by-anna-lucia" target="_blank"><br> 
+                Artblocks project page</a> <br>
+            </p>
+
+            <p style="font-weight: 300; font-size: 12px;">
+                Exhibition(s) <br>
+                - 2025 <a target="_blank" href="https://galeriemet.com/past-exhibitions/anna-lucia-oefenstof">Oefenstof</a> (solo exhibtion), Galerie Met, Berlin, Germany                          
+            </p>
+
+            <p>
+                Thread is the long-form generative token collection that compliments my project <a href="oefenstof.html">Oefenstof</a>.
+            </p> 
+
+            <p>
+                Embroidery is one of the oldest decorative crafts, practiced since the invention of the needle and thread. At some point, embroidery artists realized they needed a way to record and reference different designs. The solution was the creation of the sampler, a piece of cloth decorated with different motifs. Samplers often featured scattered motifs, bands of geometric and decorative borders, animals, floral motifs, and alphabets. Although found across diverse cultures and timelines, similarities can be found across different samplers, often executed in the binary form of a cross-stitch. This duality, stitch or no stitch, resonates with the binary logic of computation.
+            </p> 
+            
+            <p>
+                I have examined the patterns and representations found in embroidery samplers, the act of recording embroidery work, and transformed the traditional patterns through algorithmic processes. Exploring the overlap between traditional embroidery motifs and computer algorithms. This resulted in building my own library of embroidery samplers using custom code and an embroidery machine, that were recorded in my project Oefenstof.
+            </p>     
+            
+            <p>
+                In my experimentation, I applied well-known algorithms such as cellular automata and XOR patterns. Yet, their typical digital aesthetics were obscured by the constraints of the embroidery machine and the unpredictable dialogue between the artist and the computer. Thread makes the underlying patterns visible again.
+            </p>  
+     
+            <div class="single-image">
+            <img src="images/thread/evolution.png">
+            </div>     
+
+            <div class="single-image">
+                <img src="images/thread/output.gif">
+                </div>  
+
+            <div class="image-grid">
+                <img src="images/thread/81.avif">
+                <img src="images/thread/8.png">
+                <img src="images/thread/13.png">
+                <img src="images/thread/29.png">
+
+                <img src="images/thread/30.png">
+                <img src="images/thread/32.png">
+                <img src="images/thread/43.png">
+                <img src="images/thread/47.png">
+
+                <img src="images/thread/53.png">
+                <img src="images/thread/55.avif">
+                <img src="images/thread/59.avif">   
+                <img src="images/thread/67.png">
+
+                <img src="images/thread/70.png">
+                <img src="images/thread/74.png">   
+                <img src="images/thread/78.png">                   
+                <img src="images/thread/80.png">             
+            </div>                          
+
+            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
+            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var imgs = document.querySelectorAll('.image-grid img, .single-image img');
+                    for (var i = 0; i < imgs.length; i++) {
+                        imgs[i].style.cursor = 'pointer';
+                        imgs[i].addEventListener('click', function () {
+                            var src = this.getAttribute('src');
+                            if (src) {
+                                window.open(src, '_blank', 'noopener');
+                            }
+                        });
+                    }
+                });
+            </script>
+        
+    </body>
+</html>

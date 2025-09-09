@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Anna Lucia - Patched Paradise</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>        
+            <h2> 
+                Patched Paradise (2023)
+            </h2>
+
+            <p style="font-weight: 300; font-size: 12px;"> 
+                100 NFTs
+                <a target="_blank" href="https://verse.works/series/patched-paradise-by-anna-lucia" target="_blank"><br> 
+                Verse project page</a> <br>
+            </p>
+
+            <p style="font-weight: 300; font-size: 12px;">
+                Exhibition(s) <br>
+                - 2023 <a target="_blank" href="https://www.google.com/url?q=https://verse.works/exhibitions/generative-abstraction-part-3&sa=D&source=editors&ust=1724685892873516&usg=AOvVaw3IQfXGuvqvzKLlJbmxftah">Generative Abstraction and Beyond</a>, Verse x Expanded.Art, Berlin, Germany                                
+            </p>
+
+            <p>
+                Patches of code hand stitched together; for loops, rectangles
+            </p>         
+       
+            <p>
+                <b>Excerpt exhibition text:</b> Referencing the recurring theme in Anna Lucia's work that seeks the tension between computer science concepts and traditionally feminine crafts, such as textile work. It suggests that working with code has a material character for the artist and can be likened to craftsmanship. Using "hand stitched" may imply an element of following intuition in the construction of the work rather than following a systematic structure or technique. These ideas come together upon examination of the variety of outputs where rectangles overlap in a balancing act between following a strict grid and improvisational placement.                    
+            </p>      
+            
+            <div class="single-image">
+                <img src="images/patched/16.png">
+            </div>                                  
+     
+            <div class="image-grid">
+                <img src="images/patched/1.png">
+                <img src="images/patched/2.png">
+                <img src="images/patched/3.png">
+                <img src="images/patched/4.png">
+
+                <img src="images/patched/5.png">
+                <img src="images/patched/6.png">
+                <img src="images/patched/7.png">
+                <img src="images/patched/8.png">
+
+                <img src="images/patched/9.png">
+                <img src="images/patched/10.png">
+                <img src="images/patched/11.png">   
+                <img src="images/patched/12.png">
+
+                <img src="images/patched/13.png">
+                <img src="images/patched/14.png">   
+                <img src="images/patched/15.png">                   
+                <img src="images/patched/17.png">    
+            </div>           
+
+            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
+            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var imgs = document.querySelectorAll('.image-grid img, .single-image img');
+                    for (var i = 0; i < imgs.length; i++) {
+                        imgs[i].style.cursor = 'pointer';
+                        imgs[i].addEventListener('click', function () {
+                            var src = this.getAttribute('src');
+                            if (src) {
+                                window.open(src, '_blank', 'noopener');
+                            }
+                        });
+                    }
+                });
+            </script>
+        
+    </body>
+</html>

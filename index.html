@@ -5,187 +5,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anna Lucia</title>
-        <style type="text/css">
-            body {
-                margin: 40px auto;
-                max-width: 650px;
-                color: #444;
-                padding: 0 10px;
-                font-family: "Courier New", "Courier", monospace;
-                font-size: 15px;
-                line-height: 1.4;
-            }
-            h1,h2,h3 {
-                line-height: 1.2;
-                font-family: 'Arial', sans-serif;
-            }
-            p {
-                margin-bottom: 25px; 
-            }
-            .full-width-section {
-                width: 95vw;
-                margin: 40px 0;
-                position: relative;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .image-grid {
-                display: grid;
-                gap: 10px;
-                margin-top: 20px;
-            }
-
-            @media (min-aspect-ratio: 1/1.1) {
-                .image-grid {
-                    grid-template-columns: repeat(5, 1fr);
-                    grid-template-rows: repeat(4, auto);
-                }
-            }
-
-            @media (max-aspect-ratio: 1/1.1) {
-                .image-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: repeat(10, auto);
-                }
-            }
-
-            .image-grid img {
-                width: 100%;
-                height: auto;
-                display: block;
-                animation: fadeIn 0.8s ease-in-out forwards;
-            } 
-
-            .footer {
-                padding: 25px 10px;
-                bottom: 0;
-                width: 100%;
-            }
-
-        </style>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
-            <h1>
-                Anna Lucia 
-            </h1>
-                
-            <p> 
-                I'm an artist, designer, maker, and engineer from The Netherlands, currently living in Berlin. 
-            </p>
-            
-            <div class="full-width-section">
-                <div class="image-grid">
-                    <img src="images/portfolio/visual overview -01.jpg" alt="">
-                    <img src="images/portfolio/visual overview -02.jpg" alt="">
-                    <img src="images/portfolio/visual overview -03.jpg" alt="">
-                    <img src="images/portfolio/visual overview -04.jpg" alt="">
-                    <img src="images/portfolio/visual overview -05.jpg" alt="">
-                    <img src="images/portfolio/visual overview -06.jpg" alt="">
-                    <img src="images/portfolio/visual overview -07.jpg" alt="">
-                    <img src="images/portfolio/visual overview -08.jpg" alt="">
-                    <img src="images/portfolio/visual overview -09.jpg" alt="">
-                    <img src="images/portfolio/visual overview -10.jpg" alt="">
-                    <img src="images/portfolio/visual overview -11.jpg" alt="">
-                    <img src="images/portfolio/visual overview -12.jpg" alt="">
-                    <img src="images/portfolio/visual overview -13.jpg" alt="">
-                    <img src="images/portfolio/visual overview -14.jpg" alt="">
-                    <img src="images/portfolio/visual overview -15.jpg" alt="">
-                    <img src="images/portfolio/visual overview -16.jpg" alt="">
-                    <img src="images/portfolio/visual overview -17.jpg" alt="">
-                    <img src="images/portfolio/visual overview -18.jpg" alt="">
-                    <img src="images/portfolio/visual overview -19.jpg" alt="">
-                    <img src="images/portfolio/visual overview -20.jpg" alt="">
-                </div>
-            </div>
+        <main class="featured" id="randomness-view">
+            <a id="featured-link" href="#" aria-label="Open project">
+                <img id="featured-image" loading="lazy" />
+            </a>
+            <button id="randomize-btn" type="button">Randomize</button>
+        </main>
         
-            <p>
-                You can find my artist bio and CV <a href="bio-cv.html">here</a>.
-            </p>            
+        <main class="structured" id="structure-view" style="display: none;">
+            <div id="projects-grid" class="projects-grid"></div>
+        </main>
+        
+        <div class="view-controls">
+            <button id="randomness-btn" class="nav-button view-btn active" type="button">Randomness</button>
+            <button id="structure-btn" class="nav-button view-btn" type="button">Structure</button>
+        </div>
 
-            <h3>What I'm currently working on</h3>
-
-            <p>
-                <ul>
-                    <li>
-                        Figuring out how to send my art to a knitting machine while I'm taking a break from social media.
-                    </li>                  
-                </ul>              
-            </p>
-
-            <h3>Selected works</h3>
-
-            <p>
-                <ul>
-                    <li>
-                        <a href="oefenstof.html">Oefenstof</a> - a series of generative embroidery samplers
-                    </li>                  
-                    <li>
-                        <a href="yesyesno.html">{yes, yes, no, yes}</a>
-                        - a generative tattoo project together with <a href="https://www.instagram.com/kyra.orbons/" target="_blank">Kyra Orbons</a>
-                    </li>                    
-                    <li>
-                        <a href="wtbs-cap.html">WTBS: Wearable #1 (cap edition)</a>
-                        - a collection of one of a kind embroidered caps for my favorite WEB3 podcast <a href="https://open.spotify.com/show/1mCgOIE98vpVpE9nRzWfrM" target="_blank">Waiting To Be Signed</a>
-                    </li>  
-                    <li>
-                        <a href="https://bmtakeover.substack.com/about" target="_blank">TAKEOVER</a> - stewardship of the former <a href="https://www.brightmoments.io/home" target="_blank">Bright Moments</a> gallery in Berlin together with <a href="https://www.julian-h.de/" target="_blank">Julian Hespenheide</a>
-                    </li>
-                    <li>
-                        <!-- <a href="33million.html">33 million</a>  -->
-                        <a href="https://verse.works/series/33-million-by-anna-lucia">33 million</a>                         
-                        - generative art made on an embroidery machine
-                    </li>
-                    <li>
-                            <!-- <a href="generations.html">Generations</a>  -->
-                            <a href="https://www.moma.org/magazine/articles/953">MoMA Postcard First 15</a>                         
-                            - an experiment in collective creativity on the blockchain; MoMA invited 15 artists to kick off the project
-                    </li>                        
-                    <li>
-                        <!-- <a href="generations.html">Generations</a>  -->
-                        <a href="https://arsnl.art/generations">Generations</a>                         
-                        - collaboration with the Gees Bend Quilters capturing their legacy quilts in code
-                    </li>
-                </ul>    
-            </p>
-
-            <h3>Selected publications</h3>
-
-            <p>
-                <ul>
-                    <li><a href="https://www.nytimes.com/2025/06/12/fashion/computer-code-needlework-anna-lucia-goense.html">What Do Computer Code and Needlework Have in Common?</a>, The New York Times, June 2025</li>
-                    <li><a href="https://www.itsnicethat.com/articles/anna-lucia-art-discover-170225">Artist Anna Lucia is working at the intersection of craft and computation</a>, It's Nice That, February 2025</li>
-                    <li><a href="https://news.artnet.com/market/the-quilters-of-gees-bend-anna-lucia-arsnl-2298540">The Quilters of Gee’s Bend Head to the Blockchain, Collaborating With a Young Generative Artist on a Series of NFTs</a>”, Artnet, May 2023</li>
-                </ul>    
-            </p>
-
-            <h3>Available work</h3>
-            <p>
-                <ul>
-                    <li><a href="Available_Prints_Anna_Lucia.pdf" target="_blank">Buy  a print</a></li>
-                    <li><a href="Press_Release_Oefenstof.pdf" target="_blank">Oefenstof embroideries</a></li>
-                </ul>              
-            </p>
-
-            <h3>Find me elsewhere</h3>
-
-            <p>
-                <ul>
-                    <li>hi [at] annalucia.io</li>
-                    <li><a href="https://www.instagram.com/annaluciacodes" target="_blank">Instagram</a></li>
-                    <li>currently not on <a href="https://www.twitter.com/annaluciacodes" target="_blank">Twitter</a></li>
-                    <li><a href="https://rodeo.club/@annalucia/posts" target="_blank">Rodeo</a></li>
-                    <li> I occasionally write on <a href="https://annaluciawrites.substack.com/" target="_blank">Substack</a></li>
-                </ul>              
-            </p>
-
-            <div class="footer">
-                <p id="last-updated"></p>
-                <script>
-                    document.getElementById("last-updated").innerText = 
-                        "Last updated: " + new Date(document.lastModified).toLocaleDateString();
-                </script>
-            </div>
-
+        <button class="nav-button corner-name" onclick="switchView('randomness')" aria-label="Home">Anna Lucia</button>
+        <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
+        
     </body>
 </html>
