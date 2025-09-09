@@ -204,8 +204,4 @@ body::after {
         gap: 5px;
         flex-wrap: nowrap;
     }
-
-    body::after {
-        height: 80px;
-    }
 }
