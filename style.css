@@ -200,7 +200,7 @@ body::after {
         left: 50%;
         right: auto;
         bottom: 16px;
-        transform: translateX(-40%);
+        transform: translateX(-35%);
         gap: 5px;
         flex-wrap: nowrap;
     }
