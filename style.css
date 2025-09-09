@@ -202,6 +202,6 @@ body::after {
         bottom: 16px;
         transform: translateX(-35%);
         gap: 5px;
-        flex-wrap: nowrap;
+        z-index: 2;
     }
 }
