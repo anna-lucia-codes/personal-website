@@ -129,14 +129,14 @@ function initGridView() {
     
     const uniqueProjects = [
         { image: 'images/structured/structure-06.png', href: 'emailart.html', name: '(e)mail art' },  
-        { image: 'images/structured/structure-02.png', href: 'oefenstof.html', name: 'oefenstof' },
+        { image: 'images/structured/structure-02.jpg', href: 'oefenstof.html', name: 'oefenstof' },
         { image: 'images/structured/structure-07.png', href: 'thread.html', name: 'thread' }, 
-        { image: 'images/structured/structure-08.png', href: 'synths.html', name: 'synths' },
+        { image: 'images/structured/structure-08.jpg', href: 'synths.html', name: 'synths' },
         { image: 'images/structured/structure-04.png', href: '33million.html', name: '33 million' },
-        { image: 'images/structured/structure-03.png', href: 'yesyesno.html', name: '{yes, yes, no}' },
-        { image: 'images/structured/structure-09.png', href: 'generations.html', name: 'generations' },
-        { image: 'images/structured/structure-12.png', href: 'AFWIPS.html', name: 'art for walls in public spaces' },  
-        { image: 'images/structured/structure-11.png', href: 'perpetual.html', name: 'perpetual oscillations' },  
+        { image: 'images/structured/structure-03.jpg', href: 'yesyesno.html', name: '{yes, yes, no}' },
+        { image: 'images/structured/structure-09.jpg', href: 'generations.html', name: 'generations' },
+        { image: 'images/structured/structure-12.jpg', href: 'AFWIPS.html', name: 'art for walls in public spaces' },  
+        { image: 'images/structured/structure-11.jpg', href: 'perpetual.html', name: 'perpetual oscillations' },  
         { image: 'images/structured/structure-10.png', href: 'patchedparadise.html', name: 'patched paradise' }, 
         { image: 'images/structured/structure-05.png', href: 'loom.html', name: 'loom' },  
     ]
