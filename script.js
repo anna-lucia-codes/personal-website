@@ -7,6 +7,7 @@ const projects = [
   { image: 'images/oefenstof/installation_06.jpg', href: 'oefenstof.html' },
   { image: 'images/oefenstof/installation_07.jpg', href: 'oefenstof.html' },
 
+  
   { image: 'images/yesyesno/yesyesno6_.jpg', href: 'yesyesno.html' },
   { image: 'images/yesyesno/yesyesno7_.jpg', href: 'yesyesno.html' },
   { image: 'images/yesyesno/yesyesno1_.jpg', href: 'yesyesno.html' },
