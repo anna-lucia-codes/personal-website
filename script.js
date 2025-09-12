@@ -21,9 +21,9 @@ const projects = [
   { image: 'images/generations/17.png', href: 'generations.html' },
   { image: 'images/generations/18.png', href: 'generations.html' },
 
-  { image: 'images/33million/TENDER_Untitoed-21.png', href: '33million.html' },
-  { image: 'images/33million/TENDER_Untitoed-16.png', href: '33million.html' },
-  { image: 'images/33million/TENDER_Untitoed-12.png', href: '33million.html' },
+  { image: 'images/33million/TENDER_Untitoed-21.jpg', href: '33million.html' },
+  { image: 'images/33million/TENDER_Untitoed-16.jpg', href: '33million.html' },
+  { image: 'images/33million/TENDER_Untitoed-12.jpg', href: '33million.html' },
   { image: 'images/33million/7.jpg', href: '33million.html' },
   { image: 'images/33million/9.jpg', href: '33million.html' },
   { image: 'images/33million/10.jpg', href: '33million.html' },  
@@ -74,7 +74,7 @@ const projects = [
   { image: 'images/perpetual/036.jpeg', href: 'perpetual.html' },  
   { image: 'images/perpetual/lente1.jpg', href: 'perpetual.html' }, 
   { image: 'images/perpetual/lente2.jpg', href: 'perpetual.html' },  
-  { image: 'images/structured/structure-11.png', href: 'perpetual.html' },   
+  { image: 'images/structured/structure-11.jpg', href: 'perpetual.html' },   
 
   { image: 'images/patched/1.png', href: 'patched.html' },  
   { image: 'images/patched/2.png', href: 'patched.html' }, 
