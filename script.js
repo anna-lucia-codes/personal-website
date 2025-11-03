@@ -134,7 +134,7 @@ function initGridView() {
         { image: 'images/structured/structure-07.png', href: 'thread.html', name: 'thread' }, 
         { image: 'images/structured/structure-08.jpg', href: 'synths.html', name: 'synths' },
         { image: 'images/structured/structure-04.png', href: '33million.html', name: '33 million' },
-        { image: 'images/structured/structure-03.jpg', href: 'yesyesno.html', name: '{yes, yes, no}' },
+        { image: 'images/structured/structure-03.jpg', href: 'yesyesno.html', name: '{yes, yes, no, yes}' },
         { image: 'images/structured/structure-09.jpg', href: 'generations.html', name: 'generations' },
         { image: 'images/structured/structure-12.jpg', href: 'AFWIPS.html', name: 'art for walls in public spaces' },  
         { image: 'images/structured/structure-11.jpg', href: 'perpetual.html', name: 'perpetual oscillations' },  
