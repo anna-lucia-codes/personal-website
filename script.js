@@ -62,11 +62,11 @@ const projects = [
   { image: 'images/synths/Synths-037.png', href: 'synths.html' }, 
   { image: 'images/synths/Synths-040.png', href: 'synths.html' },  
 
-  { image: 'images/afwips/1.png', href: 'afwips.html' },  
-  { image: 'images/afwips/2.png', href: 'afwips.html' }, 
-  { image: 'images/afwips/3.png', href: 'afwips.html' },  
-  { image: 'images/afwips/4.png', href: 'afwips.html' },   
-  { image: 'images/afwips/nabo.jpg', href: 'afwips.html' }, 
+  { image: 'images/afwips/1.png', href: 'AFWIPS.html' },  
+  { image: 'images/afwips/2.png', href: 'AFWIPS.html' }, 
+  { image: 'images/afwips/3.png', href: 'AFWIPS.html' },  
+  { image: 'images/afwips/4.png', href: 'AFWIPS.html' },   
+  { image: 'images/afwips/nabo.jpg', href: 'AFWIPS.html' }, 
 
   { image: 'images/perpetual/012.jpeg', href: 'perpetual.html' },  
   { image: 'images/perpetual/015.jpeg', href: 'perpetual.html' }, 
@@ -77,14 +77,14 @@ const projects = [
   { image: 'images/perpetual/lente2.jpg', href: 'perpetual.html' },  
   { image: 'images/structured/structure-11.jpg', href: 'perpetual.html' },   
 
-  { image: 'images/patched/1.png', href: 'patched.html' },  
-  { image: 'images/patched/2.png', href: 'patched.html' }, 
-  { image: 'images/patched/3.png', href: 'patched.html' },  
-  { image: 'images/patched/4.png', href: 'patched.html' },   
-  { image: 'images/patched/5.png', href: 'patched.html' },  
-  { image: 'images/patched/6.png', href: 'patched.html' }, 
-  { image: 'images/patched/7.png', href: 'patched.html' },  
-  { image: 'images/patched/8.png', href: 'patched.html' },   
+  { image: 'images/patched/1.png', href: 'patchedparadise.html' },  
+  { image: 'images/patched/2.png', href: 'patchedparadise.html' }, 
+  { image: 'images/patched/3.png', href: 'patchedparadise.html' },  
+  { image: 'images/patched/4.png', href: 'patchedparadise.html' },   
+  { image: 'images/patched/5.png', href: 'patchedparadise.html' },  
+  { image: 'images/patched/6.png', href: 'patchedparadise.html' }, 
+  { image: 'images/patched/7.png', href: 'patchedparadise.html' },  
+  { image: 'images/patched/8.png', href: 'patchedparadise.html' },   
 ]; 
 
 function shuffleArrayInPlace(array) {
