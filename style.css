@@ -1,11 +1,10 @@
-
 body {
-    margin: 40px auto;
+    margin: 10px auto;
     max-width: 1100px;
     color: 'black';
     padding: 0 10px;
-    font-family: "Courier New", "Courier", monospace;
-    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
     line-height: 1.4;
 }
 
@@ -13,22 +12,22 @@ html, body { overflow-x: hidden; }
 
 h1,h2,h3 {
     line-height: 1.2;
-    font-family: 'Arial', sans-serif;
+    font-family: "Times New Roman", Times, serif;
     max-width: 650px;
-    margin-left: auto;
+    margin-left: 5px;
     margin-right: auto;
 }
 
 p {
     margin-bottom: 25px; 
     max-width: 650px;
-    margin-left: auto;
+    margin-left: 5px;
     margin-right: auto;
 }
 
 ul, ol {
     max-width: 650px;
-    margin-left: auto;
+    margin-left: 5px;
     margin-right: auto;
     padding-left: 20px;
 }
@@ -78,59 +77,111 @@ li {
     margin-bottom: 20px;
 }
 
-.nav-button {
-    padding: 0;
-    cursor: pointer;
-    font-family: "Courier New", "Courier", monospace;
+.top-nav {
+    position: relative;
+    padding: 0px 0px 20px 0;
+    background: #fff;
+    z-index: 1000;
+}
+
+.site-title {
+    font-family: "Times New Roman", Times, serif;
     font-size: 15px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0px;
+    transition: opacity 0.2s ease;
+    position: relative;
+    z-index: 1002;
+}
+
+.site-title:hover {
+    opacity: 0.4;
+}
+
+.nav-toggle {
+    display: block;
     background: none;
     border: none;
-    color: 'black';
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px;
+    margin-bottom: 12px;
     transition: opacity 0.2s ease;
+    line-height: 0;
+    position: relative;
+    z-index: 1002;
 }
 
-.nav-button:hover {
+.nav-toggle svg {
+    display: block;
+}
+
+.nav-toggle .hamburger-icon {
+    display: block;
+}
+
+.nav-toggle .cross-icon {
+    display: none;
+}
+
+.nav-toggle.menu-open .hamburger-icon {
+    display: none;
+}
+
+.nav-toggle.menu-open .cross-icon {
+    display: block;
+}
+
+.nav-toggle:hover {
     opacity: 0.4;
 }
 
-.nav-button.active {
-    opacity: 0.4;
-}
-
-.corner-name {
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
     position: fixed;
-    left: 16px;
-    bottom: 16px;
-    z-index: 2;
-}
-
-.corner-more {
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    z-index: 2;
-}
-
-.view-controls {
-    position: fixed;
-    right: 100px;
-    bottom: 16px;
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    z-index: 2;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 50px;
+    padding-top: 15px;
+    margin-left: 5px;
+    width: 100vw;
+    height: 100vh;
     background: #fff;
-    pointer-events: none;
-    z-index: 1;
+    z-index: 1001;
+}
+
+.nav-menu.open {
+    display: block;
+}
+
+.nav-menu li {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    margin-bottom: 12px;
+}
+
+.nav-link {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    transition: opacity 0.2s ease;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    opacity: 0.4;
+}
+
+.nav-link.active {
+    opacity: 0.4;
 }
 
 .featured {
@@ -159,7 +210,7 @@ body::after {
 #randomize-btn {
     padding: 6px 6px;
     cursor: pointer;
-    font-family: "Courier New", "Courier", monospace;
+    font-family: "Times New Roman", Times, serif;
     font-size: 15px;
     margin-top: 15px;
 }
@@ -201,20 +252,10 @@ body::after {
 }
 
 .project-name {
-    font-family: "Courier New", "Courier", monospace;
+    font-family: "Times New Roman", Times, serif;
     font-size: 15px;
     color: black;
     margin-top: 5px;
     text-align: center;
 }
 
-@media (max-width: 600px) {
-    .view-controls {
-        left: 50%;
-        right: auto;
-        bottom: 16px;
-        transform: translateX(-35%);
-        gap: 10px;
-        z-index: 2;
-    }
-}

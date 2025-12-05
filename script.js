@@ -169,30 +169,23 @@ function initGridView() {
 function switchView(viewType) {
     const randomnessView = document.getElementById('randomness-view');
     const structureView = document.getElementById('structure-view');
-    const randomnessBtn = document.getElementById('randomness-btn');
-    const structureBtn = document.getElementById('structure-btn');
+    const navRandomness = document.getElementById('nav-randomness');
+    const navStructure = document.getElementById('nav-structure');
+    
+    if (navRandomness) navRandomness.classList.remove('active');
+    if (navStructure) navStructure.classList.remove('active');
     
     if (viewType === 'randomness') {
         randomnessView.style.display = 'flex';
         structureView.style.display = 'none';
-        randomnessBtn.classList.add('active');
-        structureBtn.classList.remove('active');
+        if (navRandomness) navRandomness.classList.add('active');
         history.pushState({view: 'randomness'}, '', '#randomness');
     } else if (viewType === 'structure') {
         randomnessView.style.display = 'none';
         structureView.style.display = 'block';
-        randomnessBtn.classList.remove('active');
-        structureBtn.classList.add('active');
+        if (navStructure) navStructure.classList.add('active');
         history.pushState({view: 'structure'}, '', '#structure');
     }
-}
-
-function initViewControls() {
-    const randomnessBtn = document.getElementById('randomness-btn');
-    const structureBtn = document.getElementById('structure-btn');
-    
-    randomnessBtn.addEventListener('click', () => switchView('randomness'));
-    structureBtn.addEventListener('click', () => switchView('structure'));
 }
 
 function getViewFromURL() {
@@ -218,6 +211,42 @@ function handleBrowserNavigation() {
             initViewFromURL();
         }
     });
+    
+    // Handle hash changes when navigating from other pages
+    window.addEventListener('hashchange', function() {
+        initViewFromURL();
+    });
+}
+
+function toggleNavMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.querySelector('.nav-toggle');
+    const body = document.body;
+    
+    if (navMenu) {
+        navMenu.classList.toggle('open');
+        
+        // Toggle body class to hide content
+        if (navMenu.classList.contains('open')) {
+            body.classList.add('menu-open');
+            if (navToggle) navToggle.classList.add('menu-open');
+        } else {
+            body.classList.remove('menu-open');
+            if (navToggle) navToggle.classList.remove('menu-open');
+        }
+    }
+}
+
+function closeNavMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.querySelector('.nav-toggle');
+    const body = document.body;
+    
+    if (navMenu) {
+        navMenu.classList.remove('open');
+        body.classList.remove('menu-open');
+        if (navToggle) navToggle.classList.remove('menu-open');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {

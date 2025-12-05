@@ -8,12 +8,34 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <nav class="top-nav">
+            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <svg class="hamburger-icon" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="2" x2="18" y2="2" stroke="black" stroke-width="1.2"/>
+                    <line x1="0" y1="12" x2="18" y2="12" stroke="black" stroke-width="1.2"/>
+                </svg>
+                <svg class="cross-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="2" y1="2" x2="18" y2="18" stroke="black" stroke-width="1.2"/>
+                    <line x1="18" y1="2" x2="2" y2="18" stroke="black" stroke-width="1.2"/>
+                </svg>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#randomness" class="nav-link" onclick="closeNavMenu();">Randomness</a></li>
+                <li><a href="index.html#structure" class="nav-link" onclick="closeNavMenu();">Structure</a></li>
+                <li><a href="more.html" class="nav-link" onclick="closeNavMenu();">About</a></li>
+            </ul>
+        </nav>
+
         <header>        
             <h2> 
                 Perpetual Oscillations
             </h2>
 
-            <p style="font-weight: 300; font-size: 12px;"> 
+            <hr>
+
+            <p> 
                 2022 <br>
                 100 NFTs <br>
                 JavaScript <br>
@@ -22,20 +44,22 @@
                     fx(hash) project page</a>
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
+            <p>
                 Publication(s) <br>
                 - <a target="_blank" href="https://www.iillucid.com/slowing-down-with-anna-lucia-codes/">Slowing down with... Anna Lucia</a>, i illucid, March 2022   
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
+            <p>
                 Exhibition(s) <br>            
                 - 2024 <a target="_blank" href="https://responsivedreams.com/">Responsive Dreams Festival</a>, The Generative Art Museum, Barcelona, Spain <br>                
                 - 2024 <em>FX HASH Art Kiosk</em>, Digital Art Mile, Basel, Switzerland  <br> 
                 - 2022 <a target="_blank" href="https://www.google.com/url?q=https://www.azuremagazine.com/events/art-bash-2022/&sa=D&source=editors&ust=1724685892874639&usg=AOvVaw2FLZOkL-hCf_3oazL5l7Sf">AGO Art Bash! All Out!</a>, Art Gallery Ontario, Toronto, Canada                                
             </p>
 
+            <hr>
+
             <p>
-                Perpetual Oscillations extends my exploration of ambient visuals first developed in<a href="afwips.html">Art For Walls In Public Spaces</a>. Using the same generative techniques: layered, looping lines in shifting phases, I sought to create a series of works that are constantly in motion, yet quietly meditative.
+                Perpetual Oscillations extends my exploration of ambient visuals first developed in <a href="afwips.html">Art For Walls In Public Spaces</a>. Using the same generative techniques: layered, looping lines in shifting phases, I sought to create a series of works that are constantly in motion, yet quietly meditative.
             </p>                                             
      
             <p>
@@ -70,11 +94,39 @@
             <div class="single-image">
                 <img src="images/perpetual/lente2.jpg">
             </div> 
-
-            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
-            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
             
             <script>
+                function toggleNavMenu() {
+                    const navMenu = document.getElementById('nav-menu');
+                    const navToggle = document.querySelector('.nav-toggle');
+                    const body = document.body;
+                    
+                    if (navMenu) {
+                        navMenu.classList.toggle('open');
+                        
+                        // Toggle body class to hide content
+                        if (navMenu.classList.contains('open')) {
+                            body.classList.add('menu-open');
+                            if (navToggle) navToggle.classList.add('menu-open');
+                        } else {
+                            body.classList.remove('menu-open');
+                            if (navToggle) navToggle.classList.remove('menu-open');
+                        }
+                    }
+                }
+                
+                function closeNavMenu() {
+                    const navMenu = document.getElementById('nav-menu');
+                    const navToggle = document.querySelector('.nav-toggle');
+                    const body = document.body;
+                    
+                    if (navMenu) {
+                        navMenu.classList.remove('open');
+                        body.classList.remove('menu-open');
+                        if (navToggle) navToggle.classList.remove('menu-open');
+                    }
+                }
+                
                 document.addEventListener('DOMContentLoaded', function () {
                     var imgs = document.querySelectorAll('.image-grid img, .single-image img');
                     for (var i = 0; i < imgs.length; i++) {

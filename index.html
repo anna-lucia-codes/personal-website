@@ -9,6 +9,29 @@
         <script src="script.js" defer></script>
     </head>
     <body>
+
+        <nav class="top-nav">
+            <a href="index.html" class="site-title"><h3> 
+                Anna Lucia
+            </h3></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <svg class="hamburger-icon" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="2" x2="18" y2="2" stroke="black" stroke-width="1.2"/>
+                    <line x1="0" y1="12" x2="18" y2="12" stroke="black" stroke-width="1.2"/>
+                </svg>
+                <svg class="cross-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="2" y1="2" x2="18" y2="18" stroke="black" stroke-width="1.2"/>
+                    <line x1="18" y1="2" x2="2" y2="18" stroke="black" stroke-width="1.2"/>
+                </svg>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#randomness" id="nav-randomness" class="nav-link active" onclick="event.preventDefault(); switchView('randomness'); closeNavMenu(); return false;">Randomness</a></li>
+                <li><a href="index.html#structure" id="nav-structure" class="nav-link" onclick="event.preventDefault(); switchView('structure'); closeNavMenu(); return false;">Structure</a></li>
+                <li><a href="more.html" class="nav-link" onclick="closeNavMenu();">About</a></li>
+            </ul>
+        </nav>
+        
         <main class="featured" id="randomness-view">
             <a id="featured-link" href="#" aria-label="Open project">
                 <img id="featured-image" loading="lazy" />
@@ -19,13 +42,6 @@
         <main class="structured" id="structure-view" style="display: none;">
             <div id="projects-grid" class="projects-grid"></div>
         </main>
-        
-        <div class="view-controls">
-            <button id="randomness-btn" class="nav-button view-btn active" type="button">Randomness</button>
-            <button id="structure-btn" class="nav-button view-btn" type="button">Structure</button>
-        </div>
-        <button class="nav-button corner-name" onclick="switchView('randomness')" aria-label="Home">Anna Lucia</button>
-        <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
         
     </body>
 </html>
