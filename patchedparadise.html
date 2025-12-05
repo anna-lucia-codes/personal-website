@@ -6,33 +6,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anna Lucia - Patched Paradise</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Anna Lucia</a></li>
-                <li><a href="index.html#randomness">Randomness</a></li>
-                <li><a href="index.html#structure">Structure</a></li>
-                <li><a href="more.html">About</a></li>
+        <script src="script.js" defer></script>
+        </head>
+        <body>
+        <nav class="top-nav">
+            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
+                <img src="icons/cross.svg" class="cross-icon" alt="Close" />
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+                <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
             </ul>
         </nav>
+
         <header>        
             <h2> 
                 Patched Paradise 
             </h2>
-
-            <p style="font-weight: 300; font-size: 12px;"> 
+            <hr>
+            <p> 
                 2023 <br>
                 100 NFTs
                 <a target="_blank" href="https://verse.works/series/patched-paradise-by-anna-lucia" target="_blank"><br> 
                 Verse project page</a> <br>
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Exhibition(s) <br>
+            <p>
+                Exhibition: <br>
                 - 2023 <a target="_blank" href="https://www.google.com/url?q=https://verse.works/exhibitions/generative-abstraction-part-3&sa=D&source=editors&ust=1724685892873516&usg=AOvVaw3IQfXGuvqvzKLlJbmxftah">Generative Abstraction and Beyond</a>, Verse x Expanded.Art, Berlin, Germany                                
             </p>
-
+            <hr>
             <p>
                 Patches of code hand stitched together; for loops, rectangles
             </p>         
@@ -67,9 +73,6 @@
                 <img src="images/patched/17.png">    
             </div>           
 
-            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
-            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
-            
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     var imgs = document.querySelectorAll('.image-grid img, .single-image img');

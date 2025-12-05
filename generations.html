@@ -6,42 +6,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anna Lucia - Generations</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Anna Lucia</a></li>
-                <li><a href="index.html#randomness">Randomness</a></li>
-                <li><a href="index.html#structure">Structure</a></li>
-                <li><a href="more.html">About</a></li>
+        <script src="script.js" defer></script>
+        </head>
+        <body>
+        <nav class="top-nav">
+            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
+                <img src="icons/cross.svg" class="cross-icon" alt="Close" />
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+                <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
             </ul>
         </nav>
+
         <header>        
             <h2> 
                 Generations 
             </h2>
-
-            <p style="font-weight: 300; font-size: 12px;"> 
+            <hr>
+            <p> 
                 2023 <br>
                 500 NFTs + selection of quilts
                 <a target="_blank" href="https://arsnl.art/generations" target="_blank"><br>
                     ARSNL Project Page</a> <br>
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Publication(s) <br>
+            <p>
+                Publications: <br>
                 - <a <a target="_blank" href="https://news.yale.edu/2024/05/28/coded-art-ccam-gallery-pairs-physical-and-digital-debut-showcase">“Coded art: CCAM gallery pairs ‘physical and digital’ in debut showcase”</a>, Yale News, May 2024 <br>
                 - <a target="_blank" href="https://news.artnet.com/market/the-quilters-of-gees-bend-anna-lucia-arsnl-2298540">The Quilters of Gee’s Bend Head to the Blockchain, Collaborating With a Young Generative Artist on a Series of NFTs</a>”, Artnet, May 2023 <br>
                 - <a target="_blank" href="https://www.theartnewspaper.com/2023/05/17/from-frank-stella-to-the-quilters-of-gees-bend-how-artists-rights-society-is-working-in-the-world-of-nfts">From Frank Stella to the quilters of Gee's Bend: how Artists Rights Society is working in the world of NFTs</a><”, The Art Newspaper, May 2023 <br>
                 - <a target="_blank" href="https://www.rightclicksave.com/article/anna-lucia-and-the-quilters-of-gees-bend-interview">Anna Lucia and the Quilters of Gee’s Bend</a><”, Right Click Save, May 2023 <br>      
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Exhibition(s) <br>
+            <p>
+                Exhibitions: <br>
                 - 2024 <a target="_blank" href="https://www.google.com/url?q=https://news.yale.edu/2024/05/28/coded-art-ccam-gallery-pairs-physical-and-digital-debut-showcase&sa=D&source=editors&ust=1724685892871525&usg=AOvVaw09jDsU7fLRa8R1SFWBLvDR">Dimensions of Digitization</a>, CCAM Yale, New Haven, USA <br>
                 - 2023 <a target="_blank" href="https://www.google.com/url?q=https://www.subjective.art/projects/generations-anna-lucia&sa=D&source=editors&ust=1724685892873081&usg=AOvVaw1PtDcyH5GF1NtD3gnxEMTa">GENERATIONS: Anna Lucia & The Quilters of Gee’s Bend</a>, Subjective, New York City, USA       
             </p>
-
+            <hr>
             <p>
                 Generations is a collaboration with the Gee’s Bend Quiltmakers, which resulted in a collection of 500 digital quilts and a selection of quilts made from their digital counterparts.           
             </p>         
@@ -116,10 +122,7 @@
             <div class="single-image">
                 <img src="images/generations/installation_08.jpg">
             </div> 
-
-            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
-            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
-            
+ 
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     var imgs = document.querySelectorAll('.image-grid img, .single-image img');

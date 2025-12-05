@@ -6,20 +6,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anna Lucia - {yes, yes, no, yes}</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
+        <script src="script.js" defer></script>
+        </head>
+        <body>
+        <nav class="top-nav">
+            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
+                <img src="icons/cross.svg" class="cross-icon" alt="Close" />
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+                <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
+            </ul>
+        </nav>
+
         <header>
         
         <h2> 
             {yes, yes, no, yes} 
         </h2>
-
-        <p style="font-weight: 300; font-size: 12px;"> <strong>
+        <hr>
+        <p> 
             2024 - ongoing <br>
             up to 36 tattoos + NFTs <br>
             <a href="https://www.fxhash.xyz/generative/30762" target="_blank">fx(hash) project page</a> <br> </strong> 
         </p>
-
+        <hr>
         <p>
             {yes, yes, no, yes} is a generative tattoo project, allowing people to generate and select their tattoo design via a smartcontract on the Tezos blockchain. 
         </p>        
@@ -51,9 +65,6 @@
             <img src="images/yesyesno/yesyesno1_.jpg">
             <img src="images/yesyesno/yesyesno5_.jpg">             
         </div>
-
-        <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
-        <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {

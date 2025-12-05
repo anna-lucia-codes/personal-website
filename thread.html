@@ -6,14 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anna Lucia - Thread</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
+        <script src="script.js" defer></script>
+        </head>
+        <body>
+        <nav class="top-nav">
+            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
+                <img src="icons/cross.svg" class="cross-icon" alt="Close" />
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+                <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
+            </ul>
+        </nav>
+
         <header>        
             <h2> 
                 Thread 
             </h2>
-
-            <p style="font-weight: 300; font-size: 12px;"> 
+            <hr>
+            <p> 
                 2025 <br>
                 250 NFTs <br>
                 JavaScript <br>
@@ -22,11 +36,11 @@
                     Artblocks project page</a>
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Exhibition(s) <br>
+            <p>
+                Exhibition: <br>
                 - 2025 <a target="_blank" href="https://galeriemet.com/past-exhibitions/anna-lucia-oefenstof">Oefenstof</a> (solo exhibtion), Galerie Met, Berlin, Germany                          
             </p>
-
+            <hr>
             <p>
                 Thread is the long-form generative token collection that compliments my project <a href="oefenstof.html">Oefenstof</a>.
             </p> 
@@ -73,9 +87,6 @@
                 <img src="images/thread/80.png">             
             </div>                          
 
-            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
-            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
-            
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     var imgs = document.querySelectorAll('.image-grid img, .single-image img');

@@ -6,39 +6,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anna Lucia - Loom</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Anna Lucia</a></li>
-                <li><a href="index.html#randomness">Randomness</a></li>
-                <li><a href="index.html#structure">Structure</a></li>
-                <li><a href="more.html">About</a></li>
+        <script src="script.js" defer></script>
+        </head>
+        <body>
+        <nav class="top-nav">
+            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
+                <img src="icons/cross.svg" class="cross-icon" alt="Close" />
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+                <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
             </ul>
         </nav>
+
         <header>        
             <h2> 
                 Loom 
             </h2>
-
-            <p style="font-weight: 300; font-size: 12px;"> 
+            <hr>
+            <p> 
                 2021 <br>
                 200 NFTs
                 <a target="_blank" href="https://www.artblocks.io/collection/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270-213?tab=Artworks" target="_blank"><br> 
                 Artblocks project page</a> <br>
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Publication(s) <br>
+            <p>
+                Publication: <br>
                 - <a target="_blank" href="https://www.iillucid.com/slowing-down-with-anna-lucia-codes/">Slowing down with... Anna Lucia</a>, i illucid, March 2022   
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Exhibition(s) <br>
+            <p>
+                Exhibitions: <br>
                 - 2023 <a target="_blank" href="https://www.google.com/url?q=https://assembly.art/exhibitions/collecting-the-future&sa=D&source=editors&ust=1724685892872767&usg=AOvVaw2td5iWA7HHhJOExSVyfN1J">Collecting the Future</a>, Assembly, Houston, USA <br>
                 - 2022 <a target="_blank" href="https://www.google.com/url?q=https://decentralartpavilion.io/nft-exhibition/%23:~:text%3D23%2520APRIL%2520%25E2%2580%2593%252020%2520JUNE%25202022,the%2520renowned%2520Venice%2520Art%2520Biennale.&sa=D&source=editors&ust=1724685892875317&usg=AOvVaw0i_E-N745XgZius9p2Mqkp">Decentral Art Pavilion</a>, during Venice Biennale, Venice, Italy
             </p>
-
+            <hr>
             <p>
               Loom is a long-form generative artwork, released on Art Blocks in 2021. Each digital artwork is created at the moment of transaction on the Ethereum blockchain. The unique transaction data directly informs the randomness in the work, no two outputs are ever the same and the code to produce the works is stored on the blockchain. 
             </p> 
@@ -82,9 +88,6 @@
               <img src="images/loom/assembly_1.jpg">
             </div>                       
 
-            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
-            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
-            
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     var imgs = document.querySelectorAll('.image-grid img, .single-image img');

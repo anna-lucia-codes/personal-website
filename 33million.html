@@ -6,14 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anna Lucia - 33 million</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
+        <script src="script.js" defer></script>
+        </head>
+        <body>
         <nav class="top-nav">
-            <a href="index.html" class="site-title">Anna Lucia</a>
-            <ul class="nav-menu">
-                <li><a href="index.html#randomness" id="nav-randomness" class="nav-link active" onclick="event.preventDefault(); switchView('randomness'); return false;">Randomness</a></li>
-                <li><a href="index.html#structure" id="nav-structure" class="nav-link" onclick="event.preventDefault(); switchView('structure'); return false;">Structure</a></li>
-                <li><a href="more.html" class="nav-link">About</a></li>
+            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
+                <img src="icons/cross.svg" class="cross-icon" alt="Close" />
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+                <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
             </ul>
         </nav>
 
@@ -21,8 +26,8 @@
             <h2> 
                 33 million 
             </h2>
-
-            <p style="font-weight: 300; font-size: 12px;"> 
+            <hr>
+            <p> 
                 2024 <br>
                 122 NFTs + 33 machine embroidery on canvas <br>
                 JavaScript, Java, textile, thread <br>
@@ -30,16 +35,16 @@
                     Verse project page</a>
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Publication(s) <br>
+            <p>
+                Publication: <br>
                 - <a target="_blank" href="https://news.artnet.com/art-world/art-and-tech-2023-on-chain-art-2419622">A Personal List of Some of The Most Interesting Digital-Art Experiments of 2023</a></span>”, Artnet, December 2023          
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Exhibition(s) <br>
+            <p>
+                Exhibition: <br>
                 - 2023 <a target="_blank" href="https://www.google.com/url?q=https://verse.works/exhibitions/dimensionality&sa=D&source=editors&ust=1724685892872439&usg=AOvVaw2EjtxwAMVWmh52FE27MPLn">Dimensionality</a>, Untitled, Miami USA     
             </p>
-
+            <hr>
             <p>
                 33 million is a series of generative artworks specifically exploring historical needlework samplers, pieces of cross-stitching often created to showcase needlework skills and talents or used as a reference for future embroidery, with patterns sewn randomly onto the fabric. For 33 million, I interpreted the decorative patterns commonly found on these samplers into algorithmic works that simultaneously construct and deconstruct decorative aesthetics, transforming them into rhythmic digital artifacts.
             </p>         
@@ -103,9 +108,6 @@
                 <img src="images/33million/22.jpg">            
             </div>           
 
-            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
-            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
-            
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     var imgs = document.querySelectorAll('.image-grid img, .single-image img');

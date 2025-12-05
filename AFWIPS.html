@@ -6,39 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anna Lucia - Art For Walls In Public Spaces</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Anna Lucia</a></li>
-                <li><a href="index.html#randomness">Randomness</a></li>
-                <li><a href="index.html#structure">Structure</a></li>
-                <li><a href="more.html">About</a></li>
+        <script src="script.js" defer></script>
+        </head>
+        <body>
+        <nav class="top-nav">
+            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
+                <img src="icons/cross.svg" class="cross-icon" alt="Close" />
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+                <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
             </ul>
         </nav>
         <header>        
             <h2> 
                 Art For Walls In Public Spaces 
             </h2>
-
-            <p style="font-weight: 300; font-size: 12px;"> 
+            <hr>
+            <p> 
                 2022 <br>
                 144 NFTs
                 <a target="_blank" href="https://www.fxhash.xyz/project/art-for-walls-in-public-spaces" target="_blank"><br> 
                 fx(hash) project page</a> <br>
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Publication(s) <br>
+            <p>
+                Publication: <br>
                 - <a target="_blank" href="https://www.iillucid.com/slowing-down-with-anna-lucia-codes/">Slowing down with... Anna Lucia</a>, i illucid, March 2022   
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Exhibition(s) <br>
+            <p>
+                Exhibitions: <br>
                 - 2022 <a target="_blank" href="https://www.google.com/url?q=https://www.ooekultur.at/exhibition-detail/meta-space?expired&sa=D&source=editors&ust=1724685892875684&usg=AOvVaw16eQwasOvBcbr2ywep9P04">Raumvisionen</a>, Francisco Carolinum, Linz, Austria <br>
                 - 2022 <a target="_blank" href="https://www.google.com/url?q=https://spotlight.tezos.com/tezos-x-art-basel-basel-2022/&sa=D&source=editors&ust=1724685892876055&usg=AOvVaw23kv0sF_R85zULlcWnvCIN">Chance Encounters in New Mediums</a>, Tezos x Art Basel, Basel, Switzerland
             </p>
-
+            <hr>
             <p>
                 For Art For Walls In Public Space, I was thinking about Brian Eno's <i>Music for Airports</i> and his ideas about ambient music, of which he said "it must be as ignorable as it is interesting". I wanted to explore how this principle might translate visually, particularly within the context of public space. 
             </p>                                                   
@@ -74,9 +79,6 @@
                 <img src="images/afwips/4.png">
             </div>   
 
-            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
-            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
-            
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     var imgs = document.querySelectorAll('.image-grid img, .single-image img');

@@ -6,14 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anna Lucia - Oefenstof</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
+        <script src="script.js" defer></script>
+        </head>
+        <body>
+        <nav class="top-nav">
+            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
+                <img src="icons/cross.svg" class="cross-icon" alt="Close" />
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+                <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
+            </ul>
+        </nav>
+
         <header>        
             <h2> 
                 Oefenstof
             </h2>
-
-            <p style="font-weight: 300; font-size: 12px;"> 
+            <hr>
+            <p> 
                 2024 - 2025 <br>
                 52 NFTs + machine embroidery on cotton<br>
                 20cm x 20cm <br>
@@ -21,19 +35,19 @@
                     smart contract</a>
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Publication(s) <br>
+            <p>
+                Publications: <br>
                 - <a target="_blank" href="https://www.nytimes.com/2025/06/12/fashion/computer-code-needlework-anna-lucia-goense.html">What Do Computer Code and Needlework Have in Common?</a></span>, The New York Times, June 2025 <br>
                 - <a target="_blank" href="https://blog.objkt.com/post/code-and-craft-at-its-best" target="_blank">"Code and Craft at Its Best"</a>, Objkt blog, July 2024            
             </p>
 
-            <p style="font-weight: 300; font-size: 12px;">
-                Exhibition(s) <br>
+            <p>
+                Exhibitions: <br>
                 - 2025 <a target="_blank" href="https://galeriemet.com/past-exhibitions/anna-lucia-oefenstof">Oefenstof</a> (solo exhibtion), Galerie Met, Berlin, Germany <br>                      
                 - 2025 <em>Interlaced: An Exhbition of Textile and Computational Art</em>, The Painted Church, Cambridge, United Kingdom <br>   
                 - 2024 <a target="_blank" href="https://responsivedreams.com/">Responsive Dreams Festival</a>, The Generative Art Museum, Barcelona, Spain                   
             </p>
-
+            <hr>
             <p>
                 Oefenstof* is a collection of machine embroidery works created from a hand-coded algorithm that evolved over time. 
             </p>
@@ -131,9 +145,6 @@
                 *oefenstof  translates from Dutch to “practice fabric” or “practice material” and is borrowed from the book Oefenstof by Joke Visser, a history of embroidery samplers from The Netherlands.
             </p>
 
-            <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
-            <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
-            
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     var imgs = document.querySelectorAll('.image-grid img, .single-image img');
