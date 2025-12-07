@@ -23,7 +23,7 @@
         </nav>
 
         <p> 
-            I'm an artist from The Netherlands, working with computer code and textile. I am based in berlin; you can find my artist bio and CV <a href="bio-cv.html">here</a>.
+            I'm an artist from The Netherlands based in Berlin, working with computer code and textile. You can find my artist bio and CV <a href="bio-cv.html">here</a>.
         </p>  
     
         <h3>What I'm currently working on</h3>
@@ -63,12 +63,16 @@
             <ul>
                 <li>hi [at] annalucia.io</li>
                 <li><a href="https://www.instagram.com/annaluciacodes" target="_blank">Instagram</a></li>
-                <li>currently not on <a href="https://www.twitter.com/annaluciacodes" target="_blank">Twitter</a></li>
+                <li><a href="https://www.twitter.com/annaluciacodes" target="_blank">Twitter</a></li>
                 <li> I occasionally write on <a href="https://annaluciawrites.substack.com/" target="_blank">Substack</a></li>
             </ul>              
         </p>
 
         <p id="last-updated"></p>
-
+        <script>
+            document.getElementById("last-updated").innerText = 
+                "Website last updated: " + new Date(document.lastModified).toLocaleDateString();
+        </script>
+        
     </body>
 </html>
