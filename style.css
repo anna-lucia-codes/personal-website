@@ -1,7 +1,7 @@
 body {
     margin: 10px auto;
     max-width: 800px;
-    color: 'black';
+    color: black;
     padding: 0 10px;
     font-family: "Times New Roman", Times, serif;
     font-size: 16px;
@@ -15,20 +15,17 @@ h1,h2,h3 {
     font-family: "Times New Roman", Times, serif;
     max-width: 650px;
     margin-left: 5px;
-    margin-right: auto;
 }
 
 p {
     margin-bottom: 25px; 
     max-width: 650px;
     margin-left: 5px;
-    margin-right: auto;
 }
 
 ul, ol {
     max-width: 650px;
     margin-left: 5px;
-    margin-right: auto;
     padding-left: 20px;
 }
 
@@ -42,23 +39,15 @@ li {
     text-align: left;
 }
 
-.full-width-section {
-    width: 95vw;
-    margin: 40px 0;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .image-grid {
     display: grid;
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
 }
 
-.image-grid img {
+.image-grid img,
+.single-image img {
     width: 100%;
     height: auto;
     display: block;
@@ -67,16 +56,7 @@ li {
     will-change: opacity;
 }
 
-.image-grid img.loaded {
-    opacity: 1;
-}
-
-.single-image img {
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    will-change: opacity;
-}
-
+.image-grid img.loaded,
 .single-image img.loaded {
     opacity: 1;
 }
@@ -87,9 +67,6 @@ li {
 }
 
 .single-image img {
-    width: 100%;
-    height: auto;
-    display: block;
     margin-bottom: 20px;
 }
 
@@ -233,17 +210,15 @@ li {
 }
 
 .featured img {
-    max-height: 100%;
-    width: auto;
-    height: auto;
     max-width: 100%;
+    max-height: 100%;
     display: block;
     will-change: opacity;
     transition: opacity 0.3s ease-in-out;
 }
 
 #randomize-btn {
-    padding: 6px 6px;
+    padding: 6px;
     cursor: pointer;
     font-family: "Times New Roman", Times, serif;
     font-size: 15px;
@@ -257,12 +232,8 @@ li {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .projects-grid {
@@ -274,14 +245,13 @@ li {
     padding: 0 20px;
 }
 
-.project-item {
+.project-item,
+.projects-grid a {
     display: flex;
     flex-direction: column;
 }
 
 .projects-grid a {
-    display: flex;
-    flex-direction: column;
     text-decoration: none;
     transition: transform 0.2s ease;
 }
@@ -295,6 +265,7 @@ li {
     height: auto;
     display: block;
     will-change: opacity;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .project-item.image-loading {
@@ -304,10 +275,6 @@ li {
 
 .project-item.image-loading img {
     opacity: 0;
-}
-
-.projects-grid img.project-image {
-    transition: opacity 0.4s ease-in-out;
 }
 
 .project-name {
@@ -323,4 +290,3 @@ li {
         padding-left: calc((100vw - 800px) / 2);
     }
 }
-
