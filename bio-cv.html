@@ -6,8 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anna Lucia</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
+        <nav class="top-nav">
+            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+
+            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+                <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
+                <img src="icons/cross.svg" class="cross-icon" alt="Close" />
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+                <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
+            </ul>
+        </nav>
 
         <h3>Bio</h3>
 
@@ -92,8 +105,5 @@
         <p>Propedeuse Fashion Design, Utrecht School of Arts, 2010-2011</p>
 
         </p>                
-    
-        <button class="nav-button corner-name" onclick="window.location.href='index.html'" aria-label="Home">Anna Lucia</button>
-        <button class="nav-button corner-more" onclick="window.location.href='more.html'" aria-label="More">About</button>
-                     
+           
     </body>
