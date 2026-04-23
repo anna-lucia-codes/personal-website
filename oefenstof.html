@@ -9,18 +9,6 @@
         <script src="script.js" defer></script>
         </head>
         <body>
-        <nav class="top-nav">
-            <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
-
-            <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
-                <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
-                <img src="icons/cross.svg" class="cross-icon" alt="Close" />
-            </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
-                <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
-            </ul>
-        </nav>
 
         <header>        
             <h2> 
@@ -31,7 +19,7 @@
                 2024 - 2025 <br>
                 52 NFTs + machine embroidery on cotton<br>
                 20cm x 20cm <br>
-                <a target="_blank" href="https://objkt.com/collections/KT1Pi9P9WCwDay4HyAETLMmGjgmjmvCpoWER" target="_blank">
+                <a target="_blank" href="https://objkt.com/collections/KT1Pi9P9WCwDay4HyAETLMmGjgmjmvCpoWER">
                     smart contract</a>
             </p>
 
@@ -145,20 +133,6 @@
                 *oefenstof  translates from Dutch to “practice fabric” or “practice material” and is borrowed from the book Oefenstof by Joke Visser, a history of embroidery samplers from The Netherlands.
             </p>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    var imgs = document.querySelectorAll('.image-grid img, .single-image img');
-                    for (var i = 0; i < imgs.length; i++) {
-                        imgs[i].style.cursor = 'pointer';
-                        imgs[i].addEventListener('click', function () {
-                            var src = this.getAttribute('src');
-                            if (src) {
-                                window.open(src, '_blank', 'noopener');
-                            }
-                        });
-                    }
-                });
-            </script>
         
     </body>
 </html>

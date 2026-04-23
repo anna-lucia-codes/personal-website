@@ -253,9 +253,38 @@ function initImageLazyLoading() {
   });
 }
 
+function initNav() {
+  const nav = document.createElement('nav');
+  nav.className = 'top-nav';
+  nav.innerHTML = `
+    <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+    <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
+      <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
+      <img src="icons/cross.svg" class="cross-icon" alt="Close" />
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+      <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
+    </ul>
+  `;
+  document.body.prepend(nav);
+}
+
+function initImageClickToOpen() {
+  document.querySelectorAll('.image-grid img, .single-image img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      const src = this.getAttribute('src');
+      if (src) window.open(src, '_blank', 'noopener');
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  initNav();
   initRandomizer();
   initGridView();
   initActiveNavItem();
   initImageLazyLoading();
+  initImageClickToOpen();
 });
