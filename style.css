@@ -4,11 +4,12 @@ body {
     margin: 10px auto;
     max-width: 800px;
     color: black;
-    padding: 0 10px;
+    padding: 0 24px;
     font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.4;
-    background: oklch(95% 0.010 75);
+    background: oklch(98.5% 0.006 75);
+    /* background: oklch(95% 0.010 75); */
 }
 
 html, body { overflow-x: hidden; }
@@ -21,7 +22,7 @@ h1,h2,h3 {
 }
 
 p {
-    margin-bottom: 25px; 
+    margin-bottom: 20px; 
     max-width: 650px;
     margin-left: 5px;
 }
@@ -46,7 +47,7 @@ li {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    margin: 20px 0;
+    margin: 0px 0;
 }
 
 .image-grid img,
@@ -66,16 +67,16 @@ li {
 
 .single-image {
     max-width: 100%;
-    margin: 20px auto;
+    margin: 0px auto;
 }
 
 .single-image img {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .top-nav {
     position: relative;
-    padding: 22px 24px 16px;
+    padding: 22px 0px 16px;
     background: transparent;
     z-index: 1000;
 }
@@ -85,7 +86,7 @@ li {
     text-decoration: none;
     display: block;
     margin-bottom: 0px;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 500;
     letter-spacing: -0.01em;
     transition: opacity 0.2s ease;
@@ -102,8 +103,8 @@ li {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
-    margin-left: 5px;
+    margin-left: -5px;
+    margin-top: 10px;
     margin-bottom: 12px;
     transition: opacity 0.2s ease;
     line-height: 0;
@@ -150,7 +151,7 @@ li {
     right: 0;
     bottom: 0;
     padding-top: 150px;
-    padding-left: 10px;
+    padding-left: max(24px, calc((100vw - 800px) / 2));
     width: 100%;
     height: 100%;
     min-width: 100vw;
@@ -186,7 +187,6 @@ li {
     display: block;
     transition: opacity 0.2s ease;
     padding: 0;
-    margin-left: 5px;
     background: none;
     border: none;
     cursor: pointer;
@@ -211,6 +211,7 @@ li {
 
 #randomize-btn {
     background: none;
+    border: 1px solid #999;
     border: 1px solid oklch(58% 0.01 75);
     border-radius: 2px;
     padding: 6px 20px;
@@ -220,16 +221,14 @@ li {
     font-weight: 400;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    color: #5a5652;
     color: oklch(35% 0.01 75);
     margin-top: 24px;
     transition: border-color 0.15s, color 0.15s;
 }
 
 #randomize-btn:hover {
-    border-color: #4a4744;
-    border-color: oklch(30% 0.01 75);
-    color: #1a1918;
-    color: oklch(15% 0.01 75);
+    background: oklch(90% 0.006 75);
 }
 
 .structured {
@@ -252,59 +251,36 @@ li {
     padding: 0 20px;
 }
 
-.project-item,
-.projects-grid a {
+.grid-card {
+    background: oklch(98.5% 0.006 75);
+    padding: 10px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
     display: flex;
     flex-direction: column;
-}
-
-.projects-grid a {
     text-decoration: none;
-    transition: transform 0.2s ease;
+    transition: box-shadow 0.2s ease;
 }
 
-.projects-grid a:hover {
-    transform: scale(1.02);
+.grid-card:hover {
+    box-shadow: 0 4px 28px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.07);
 }
 
-.projects-grid img {
+.grid-card .card-image-box img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
     display: block;
     will-change: opacity;
     transition: opacity 0.4s ease-in-out;
 }
 
-.project-item.image-loading {
-    min-height: 200px;
-    background: #f5f5f5;
-}
-
-.project-item.image-loading img {
-    opacity: 0;
-}
-
-.project-name {
-    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: black;
-    margin-top: 5px;
-    text-align: center;
-}
-
-@media (min-width: 820px) {
-    .nav-menu {
-        padding-left: calc((100vw - 800px) / 2);
+@media (max-width: 750px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 /* ── Landing page ─────────────────────────────── */
-
-body.page-landing {
-    max-width: none;
-    margin: 0;
-    padding: 0;
-}
 
 body.page-landing .featured {
     max-width: 560px;
@@ -312,10 +288,14 @@ body.page-landing .featured {
     margin: 0 auto;
 }
 
+.project-card a {
+    display: block;
+}
+
 .project-card {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     background: oklch(98.5% 0.006 75);
-    margin: 0 20px;
+    margin: 0 10px;
     padding: 10px;
     border-radius: 0;
     box-shadow: 0 2px 20px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
@@ -329,7 +309,7 @@ body.page-landing .featured {
 
 .card-image-box {
     width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 4 / 4.2;
     background: oklch(98.5% 0.006 75);
     overflow: hidden;
     display: flex;
@@ -360,13 +340,35 @@ body.page-landing .featured {
     font-weight: 500;
     letter-spacing: -0.02em;
     color: oklch(15% 0.01 75);
+    margin-left: 0px;
 }
 
 .card-year {
-    font-size: 11px;
+    font-size: 17px;
     font-weight: 300;
     letter-spacing: 0.04em;
     color: oklch(52% 0.01 75);
+    margin-right: 0px;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 9px;
+}
+
+.card-tag {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    color: #888;
+    color: oklch(52% 0.01 75);
+    border: 1px solid #ccc;
+    border: 1px solid oklch(78% 0.011 75);
+    border-radius: 20px;
+    padding: 2px 8px;
+    background: none;
 }
 
 .card-rule {
@@ -383,4 +385,35 @@ body.page-landing .featured {
     text-wrap: pretty;
     margin: 0;
     max-width: none;
+}
+
+#img-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+#img-modal.open { display: flex; }
+
+#img-modal img {
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+    cursor: default;
+}
+
+#img-modal-close {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px 8px;
 }
