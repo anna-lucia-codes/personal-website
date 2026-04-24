@@ -9,15 +9,26 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="script.js" defer></script>
     </head>
-    <body>
+    <body class="page-landing">
 
-        
         <main class="featured">
-            <a id="featured-link" href="#" aria-label="Open project">
-                <img id="featured-image" loading="lazy" />
-            </a>
+            <div id="project-card" class="project-card">
+                <a id="featured-link" href="#" aria-label="Open project">
+                    <div class="card-image-box">
+                        <img id="featured-image" alt="" />
+                    </div>
+                </a>
+                <div class="card-meta">
+                    <div class="card-title-row">
+                        <span id="card-title" class="card-title"></span>
+                        <span id="card-year" class="card-year"></span>
+                    </div>
+                    <hr class="card-rule">
+                    <p id="card-desc" class="card-desc"></p>
+                </div>
+            </div>
             <button id="randomize-btn" type="button">Randomize</button>
         </main>
-        
+
     </body>
 </html>

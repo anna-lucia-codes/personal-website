@@ -1,3 +1,17 @@
+const projectMeta = {
+  'emailart.html':        { title: '(e)mail art',                    year: '2025 - now', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+  'oefenstof.html':       { title: 'Oefenstof',                      year: '2025', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+  'thread.html':          { title: 'Thread',                         year: '2025', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+  'synths.html':          { title: 'Synths',                         year: '2024', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+  '33million.html':       { title: '33 million',                     year: '2024', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+  'yesyesno.html':        { title: '{yes, yes, no, yes}',            year: '2024 - now', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+  'Generations.html':     { title: 'generations',                    year: '2023', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+  'AFWIPS.html':          { title: 'Art For Walls In Public Spaces', year: '2022', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+  'perpetual.html':       { title: 'Perpetual Oscillations',         year: '2022', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+  'patchedparadise.html': { title: 'Patched Paradise',               year: '2023', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+  'loom.html':            { title: 'Loom',                           year: '2021', desc: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' },
+};
+
 const projects = [
   { image: 'images/oefenstof/installation_01.jpg', href: 'oefenstof.html' },
   { image: 'images/oefenstof/installation_02.jpg', href: 'oefenstof.html' },
@@ -85,30 +99,57 @@ function shuffleArrayInPlace(array) {
 }
 
 function showProject(item) {
-  const linkEl = document.getElementById('featured-link');
-  const imgEl = document.getElementById('featured-image');
+  const linkEl  = document.getElementById('featured-link');
+  const imgEl   = document.getElementById('featured-image');
+  const titleEl = document.getElementById('card-title');
+  const yearEl  = document.getElementById('card-year');
+  const descEl  = document.getElementById('card-desc');
+
+  if (!linkEl || !imgEl) return;
+
+  const meta = projectMeta[item.href] || {};
   linkEl.href = item.href;
-  imgEl.style.opacity = '0';
-  imgEl.src = item.image;
-  imgEl.addEventListener('load', () => imgEl.style.opacity = '1', { once: true });
+  imgEl.src   = item.image;
+  if (titleEl) titleEl.textContent = meta.title || '';
+  if (yearEl)  yearEl.textContent  = meta.year  || '';
+  if (descEl)  descEl.textContent  = meta.desc  || '';
 }
 
 function initRandomizer() {
-  const button = document.getElementById('randomize-btn');
-  const imgEl = document.getElementById('featured-image');
-  if (!button || !imgEl) return;
-  
-  imgEl.style.opacity = '0';
+  const button  = document.getElementById('randomize-btn');
+  const cardEl  = document.getElementById('project-card');
+  if (!button) return;
+
   let order = shuffleArrayInPlace(projects.slice());
   let currentItem = order[0];
   showProject(currentItem);
 
   button.addEventListener('click', () => {
-    const newOrder = shuffleArrayInPlace(projects.slice());
-    const currentIndex = newOrder.indexOf(currentItem);
-    if (currentIndex !== -1) newOrder.splice(currentIndex, 1);
-    currentItem = newOrder[0] || currentItem;
-    showProject(currentItem);
+    if (!cardEl) {
+      const newOrder = shuffleArrayInPlace(projects.slice());
+      const currentIndex = newOrder.indexOf(currentItem);
+      if (currentIndex !== -1) newOrder.splice(currentIndex, 1);
+      currentItem = newOrder[0] || currentItem;
+      showProject(currentItem);
+      return;
+    }
+
+    cardEl.classList.add('card-hidden');
+
+    setTimeout(() => {
+      const newOrder = shuffleArrayInPlace(projects.slice());
+      const currentIndex = newOrder.indexOf(currentItem);
+      if (currentIndex !== -1) newOrder.splice(currentIndex, 1);
+      currentItem = newOrder[0] || currentItem;
+      showProject(currentItem);
+
+      cardEl.style.transition = 'opacity 250ms ease, transform 250ms ease';
+      cardEl.classList.remove('card-hidden');
+
+      cardEl.addEventListener('transitionend', () => {
+        cardEl.style.transition = '';
+      }, { once: true });
+    }, 260);
   });
 }
 
@@ -257,13 +298,13 @@ function initNav() {
   const nav = document.createElement('nav');
   nav.className = 'top-nav';
   nav.innerHTML = `
-    <a href="index.html" class="site-title"><h2>Anna Lucia</h2></a>
+    <a href="index.html" class="site-title">Anna Lucia</a>
     <button class="nav-toggle" onclick="toggleNavMenu()" aria-label="Toggle menu">
       <img src="icons/hamburger.svg" class="hamburger-icon" alt="Menu" />
       <img src="icons/cross.svg" class="cross-icon" alt="Close" />
     </button>
     <ul class="nav-menu" id="nav-menu">
-      <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Selected work</a></li>
+      <li><a href="selected.html" id="nav-structure" class="nav-link" onclick="closeNavMenu();">Works</a></li>
       <li><a href="more.html" id="nav-about" class="nav-link" onclick="closeNavMenu();">About</a></li>
     </ul>
   `;

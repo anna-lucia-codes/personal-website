@@ -1,18 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap');
+
 body {
     margin: 10px auto;
     max-width: 800px;
     color: black;
     padding: 0 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.4;
+    background: oklch(95% 0.010 75);
 }
 
 html, body { overflow-x: hidden; }
 
 h1,h2,h3 {
     line-height: 1.2;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
     max-width: 650px;
     margin-left: 5px;
 }
@@ -72,8 +75,8 @@ li {
 
 .top-nav {
     position: relative;
-    padding: 0px 0px 20px 0;
-    background: #fff;
+    padding: 22px 24px 16px;
+    background: transparent;
     z-index: 1000;
 }
 
@@ -82,6 +85,9 @@ li {
     text-decoration: none;
     display: block;
     margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
     transition: opacity 0.2s ease;
     position: relative;
     z-index: 1002;
@@ -173,7 +179,7 @@ li {
 }
 
 .nav-link {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: black;
     text-decoration: none;
@@ -199,30 +205,31 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 250px);
-}
-
-.featured a#featured-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-}
-
-.featured img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    will-change: opacity;
-    transition: opacity 0.3s ease-in-out;
+    min-height: calc(100vh - 180px);
+    padding: 0 0 40px;
 }
 
 #randomize-btn {
-    padding: 6px;
+    background: none;
+    border: 1px solid oklch(58% 0.01 75);
+    border-radius: 2px;
+    padding: 6px 20px;
     cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    margin-top: 15px;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: oklch(35% 0.01 75);
+    margin-top: 24px;
+    transition: border-color 0.15s, color 0.15s;
+}
+
+#randomize-btn:hover {
+    border-color: #4a4744;
+    border-color: oklch(30% 0.01 75);
+    color: #1a1918;
+    color: oklch(15% 0.01 75);
 }
 
 .structured {
@@ -278,7 +285,7 @@ li {
 }
 
 .project-name {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: black;
     margin-top: 5px;
@@ -289,4 +296,91 @@ li {
     .nav-menu {
         padding-left: calc((100vw - 800px) / 2);
     }
+}
+
+/* ── Landing page ─────────────────────────────── */
+
+body.page-landing {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+body.page-landing .featured {
+    max-width: 560px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.project-card {
+    width: calc(100% - 40px);
+    background: oklch(98.5% 0.006 75);
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+    transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.project-card.card-hidden {
+    opacity: 0;
+    transform: translateY(6px);
+}
+
+.card-image-box {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: oklch(98.5% 0.006 75);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.card-meta {
+    margin-top: 14px;
+}
+
+.card-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 9px;
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: oklch(15% 0.01 75);
+}
+
+.card-year {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: oklch(52% 0.01 75);
+}
+
+.card-rule {
+    border: none;
+    border-top: 1px solid oklch(86% 0.011 75);
+    margin: 0 0 9px 0;
+}
+
+.card-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: oklch(38% 0.01 75);
+    line-height: 1.55;
+    text-wrap: pretty;
+    margin: 0;
+    max-width: none;
 }
