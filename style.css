@@ -8,7 +8,7 @@ body {
     font-family: 'DM Sans', Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.4;
-    background: oklch(98.5% 0.006 75);
+    background: oklch(97% 0.000 271.152);
     /* background: oklch(95% 0.010 75); */
 }
 
@@ -252,7 +252,7 @@ li {
 }
 
 .grid-card {
-    background: oklch(98.5% 0.006 75);
+    background: oklch(97% 0.000 271.152);
     padding: 10px;
     box-shadow: 0 2px 20px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
     display: flex;
@@ -294,7 +294,7 @@ body.page-landing .featured {
 
 .project-card {
     width: calc(100% - 20px);
-    background: oklch(98.5% 0.006 75);
+    background: oklch(97% 0.000 271.152);
     margin: 0 10px;
     padding: 10px;
     border-radius: 0;
@@ -310,7 +310,7 @@ body.page-landing .featured {
 .card-image-box {
     width: 100%;
     aspect-ratio: 4 / 4.2;
-    background: oklch(98.5% 0.006 75);
+    background: oklch(97% 0.000 271.152);
     overflow: hidden;
     display: flex;
     align-items: center;
